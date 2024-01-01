@@ -8,7 +8,7 @@ const CitySearch = ({ onSearchChange }) => {
   const loadOptions = async (inputValue) => {
     try {
       const response = await fetch(
-        `${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
+        `${GEO_API_URL}/cities?minPopulation=100000&namePrefix=${inputValue}`,
         geoApiOptions
       );
       const result = await response.json();
