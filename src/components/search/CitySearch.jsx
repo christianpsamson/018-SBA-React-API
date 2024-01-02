@@ -3,7 +3,7 @@ import { AsyncPaginate } from "react-select-async-paginate";
 import { GEO_API_URL, geoApiOptions } from "../../Api";
 
 const CitySearch = ({ onSearchChange }) => {
-  const [search, setSearch] = useState(null);
+  const [search, setSearch] = useState("");
 
   const loadOptions = async (inputValue) => {
     try {
@@ -30,6 +30,11 @@ const CitySearch = ({ onSearchChange }) => {
     onSearchChange(searchData);
   };
 
+  const handleMenuOpen = () => {
+    setSearch("");
+    console.log("It happened");
+  };
+
   return (
     <AsyncPaginate
       placeholder="Search for City"
@@ -37,6 +42,7 @@ const CitySearch = ({ onSearchChange }) => {
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
+      onMenuOpen={handleMenuOpen}
     />
   );
 };
