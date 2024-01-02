@@ -10,7 +10,7 @@ Welcome to our React weather application powered by Vite.js! This project offers
 
 ## Live Site
 
-[Link to Live Site](https://your-live-site-url.com)
+[Link to Live Site](https://roaring-meringue-0a87f0.netlify.app/)
 
 ## Technologies Used
 
